@@ -2,14 +2,14 @@ This is a mirror of http://www.vim.org/scripts/script.php?script_id=3607
 
 This script simplifies opening of related files in Django projects.
 
-If you are editing a file in a Django application, say "myproject/myapp", vim_django will find your settings.py, get the template directory, and return <template_directory>/<myapp>.
+If you are editing a file in a Django project, vim_django will find the location of your template files and app files. In combination with the Command-T plugin: vimscript #3025, this makes it super-easy to open files related to the one you are currently editing.
 
-This is particularly useful in combination with the Command-T plugin: vimscript #3025
-
-Watch a demo on Viemo: http://vimeo.com/24394421 (1:24)
-
+Watch a demo on Viemo: http://vimeo.com/24394421 (1:24) (This only shows opening of template files, but files in the app itself can be opened in the same way)
 
 Suggested mapping:
 map <Leader>dt :VimDjangoCommandTTemplate<CR>
+map <Leader>da :VimDjangoCommandTApp<CR>
 
-If you put that line in your .vimrc, hitting "<Leader>dt" while working on a Django application will start CommandT in the template directory corresponding to the application. ("<Leader>" is usually mapped as "\" or "," so try "\dt" or ",dt".)
+If you put that line in your .vimrc, hitting "<Leader>dt" while working on a Django application will start CommandT in the template directory corresponding to the application. Hitting "<Leader>da will start CommandT in the app directory. ("<Leader>" is usually mapped as "\" or "," so try "\dt" or ",dt".)
+
+If you have any questions, please send me an email at anders AT knatten DOT org
